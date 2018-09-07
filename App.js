@@ -6,18 +6,24 @@
  * @flow
  */
 
-import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View, Image} from 'react-native';
+import Judul from './komponen/Judul';
 
-export default class App extends React.Component {
+
+type Props ={};
+export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
+      <Judul judul="BIODATA"/>
+      <Judul judul="LOGIN"/>
+      <Judul judul="FORM"/>
         
-        <Text>Nama : RIZKA SALMA ADELIA</Text>
+        <Text>Nama : RIZKA SALMA ADELIA </Text>
         <Text>No Absen : 33</Text>
         <Text>Kelas : XI RPL 1</Text>
-        <Image style={{width: 300, height: 400}}
+        <Image style={{width: 300, height: 400}} 
         source={require('./holla.jpg')}
         />
       </View>
